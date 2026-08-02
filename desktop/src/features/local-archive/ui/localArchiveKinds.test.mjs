@@ -160,7 +160,7 @@ test("toggleGroup_noneChecked_checksAll", () => {
   }
 });
 
-test("toggleGroup_allChecked_uncheksAll", () => {
+test("toggleGroup_allChecked_unchecksAll", () => {
   const group = groupByLabel("Messages & posts");
   const allChecked = new Set(kindsOfGroup("Messages & posts"));
   const result = toggleGroup(group, allChecked);
