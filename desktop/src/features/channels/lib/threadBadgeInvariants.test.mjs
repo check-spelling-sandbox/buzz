@@ -6,7 +6,7 @@ import { buildRepliesByRootId } from "./subtreeCreatedAt.ts";
 
 // LP4 v3 characterization invariants for thread-unread badges.
 //
-// Each invariant pins a contract the per-message badge pipeline holds. They are
+// Each invariant pins a contract held by the per-message badge pipeline. They are
 // the observable behaviors Will depends on: a change that breaks any one of
 // (a)-(g) has regressed behavior, not just refactored an internal path.
 //
