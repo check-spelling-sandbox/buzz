@@ -21,7 +21,7 @@
 //! ## Why HEAD is in the manifest
 //!
 //! HEAD is *published* ref state (§Implementation Correspondence), not a
-//! read-time default. Deriving it ("default to main, fallback to first head")
+//! read-time default. Deriving it ("default to main, fall back to first head")
 //! would let a clone advertise a different default branch than the writer
 //! intended — `Inv_RefEffectApplied` would not hold.
 
