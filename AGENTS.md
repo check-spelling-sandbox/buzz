@@ -516,7 +516,7 @@ px:
   zoom fine but re-fragment the scale we consolidated. Use a named token.
 
 Prefer stock tokens — they're rem and zoom-safe. Only if a design genuinely
-needs a size the stock/`2xs`/`3xs` scale can't express should you **add a
+needs a size that the stock/`2xs`/`3xs` scale can't express should you **add a
 rem-based token** (in `desktop/tailwind.config.js` under `theme.extend.fontSize`)
 rather than an arbitrary literal. A CI guard (`pnpm check:px-text`, in
 `desktop/scripts/check-px-text.mjs`) scans all of `desktop/src` and fails on any

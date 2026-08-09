@@ -1251,7 +1251,7 @@ impl<D: HuddleDirectory + ?Sized> HuddleControlAcceptor<D> {
                     let community = CommunityId::from_uuid(community_id);
                     // Validate-before-admit: the Redis fence keyed by the
                     // asserted community must pass before any room mutation. A
-                    // wrong community keys a lease the owner never wrote → a
+                    // wrong community keys a lease that the owner never wrote → a
                     // typed fence rejection, so no peer is admitted and the
                     // client sees the same taxonomy a same-pod join would. A
                     // *non-fence* validate error (Redis unreachable, decode) is

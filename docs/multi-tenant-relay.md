@@ -643,9 +643,9 @@ exists-trace probe of the old premise returns `no trace found`.) The fix decoupl
 the inequality onto a separate witness timepoint `#k`; a new exists-trace lemma
 `executable_other_key_compromise_plus_system_accept` (16 steps, verified) proves the
 corrected premise is satisfiable, so the 147-step proof is non-vacuous. This is the
-same hygiene class as F1/F3/F4 — an artifact relying on a fact the model never makes
-reachable — but caught inside a safety lemma's premise rather than a comment. That
-fix predates this milestone's host-binding additions and is carried forward
+same hygiene class as F1/F3/F4 — an artifact relying on a fact that the model never
+makes reachable — but caught inside a safety lemma's premise rather than a comment.
+That fix predates this milestone's host-binding additions and is carried forward
 unchanged in the current `.spthy`.
 
 ## Conformance

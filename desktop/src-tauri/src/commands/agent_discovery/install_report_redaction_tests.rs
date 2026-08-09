@@ -385,8 +385,8 @@ fn test_pat_named_variables_are_secret() {
 /// installer echoed reach neither the log nor the live line.
 ///
 /// Both are checked through the real reporter rather than the classifier, so
-/// this covers the wiring — a classifier that recognises a secret the reporter
-/// never consults would still leak.
+/// this covers the wiring — a classifier that recognises a secret that the
+/// reporter never consults would still leak.
 #[test]
 fn test_proxy_and_pat_credentials_are_redacted_from_the_log_and_the_live_line() {
     let proxy_password = "hunter2pass";

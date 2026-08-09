@@ -7174,8 +7174,8 @@ mod tests {
     /// Negative arm for the OpenRouter terminal: an ordinary 400 must stay
     /// `AgentError::Llm`. Paired with the positive above, this is what proves
     /// the matcher — not the status alone — is doing the classification. The
-    /// body deliberately quotes "tokens" and "model", the words a loose matcher
-    /// would key on.
+    /// body deliberately quotes "tokens" and "model", the words that a loose
+    /// matcher would key on.
     #[tokio::test(flavor = "multi_thread", worker_threads = 2)]
     async fn openrouter_ordinary_400_stays_plain_llm_error() {
         let (url, _captured, _attempts) = spawn_openrouter_stub(vec![CannedResponse::new(

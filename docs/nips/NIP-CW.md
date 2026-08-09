@@ -193,7 +193,7 @@ A client with neither an authenticated transport nor a verifiable relay identity
 ## Implementation Gotchas
 
 - The `limit + 1` probe MUST run after *all* predicates (access, deletion, top-level, `kinds`). A probe over a superset produces false `has_more = true` on the last page.
-- The cursor comparison uses `id > $id` (bytewise ascending) because the total order is `created_at DESC, id ASC`. Getting the id inequality backwards drops or duplicates same-second rows — precisely the bug the composite cursor removes.
+- The cursor comparison uses `id > $id` (bytewise ascending) because the total order is `created_at DESC, id ASC`. Getting the id inequality backwards drops or duplicates same-second rows — precisely the bug that the composite cursor removes.
 - `next_cursor` is the last retained *scan candidate*, not the last delivered row: capture the scan position before per-event reconstruction so a skipped event cannot stall pagination. Clients echo it verbatim and never derive or validate it against the rows they received.
 - Events ingested before the relay computed thread metadata have no depth; they MUST be treated as top-level rather than vanishing from every window.
 - The `d` tag on `39006` differs per request cursor by design: concurrent pages of one channel coexist in a replaceable-event cache instead of clobbering each other. The per-channel-singleton alternative would make page N overwrite page N+1's bounds.

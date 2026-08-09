@@ -22,7 +22,7 @@
 //! harness forbids constructing a `TenantContext` outside host resolution and
 //! tests; the type only removes the *accidental* path (deserializing a
 //! client-chosen community), and review/lint closes the deliberate one. We say
-//! this plainly rather than overclaim a guarantee the `pub` API doesn't give.
+//! this plainly rather than overclaim a guarantee that the `pub` API doesn't give.
 
 use std::fmt;
 use uuid::Uuid;

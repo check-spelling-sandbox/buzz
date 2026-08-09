@@ -107,7 +107,7 @@ async function listenForAgentsDataChanged(
     });
   });
 
-  // Return a thunk the caller invokes after the reconcile to await the result.
+  // Return a thunk that the caller invokes after the reconcile to await the result.
   return () =>
     page.evaluate(
       () =>

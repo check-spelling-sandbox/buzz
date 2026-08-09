@@ -621,8 +621,8 @@ mod tests {
     /// Regression: the frontend sends the request payload in camelCase
     /// (`targetPubkey`, `replacedBy`); these structs MUST deserialize it.
     /// Without `#[serde(rename_all = "camelCase")]` the archive/unarchive
-    /// commands fail to deserialize at runtime — a failure the e2e mock hides
-    /// because it returns before parsing the payload. Red-if-broken guard.
+    /// commands fail to deserialize at runtime — a failure that the e2e mock
+    /// hides because it returns before parsing the payload. Red-if-broken guard.
     #[test]
     fn archive_request_deserializes_camel_case_payload() {
         let req: ArchiveRequest = serde_json::from_str(

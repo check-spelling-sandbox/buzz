@@ -161,7 +161,7 @@ fn normalize_d_tag(raw: &str) -> String {
 /// lowest event id. The local retention upsert (`retain_event`) replaces on
 /// `>=`, so without this bump a same-second second edit is kept LOCALLY while
 /// the relay's lowest-id tiebreak may keep the OLDER event — divergence, and
-/// the flush can mark the local row synced against a head the relay rejected.
+/// the flush can mark the local row synced against a head that the relay rejected.
 /// Bumping past the head guarantees a fresh write always supersedes regardless
 /// of clock skew.
 pub fn monotonic_created_at(prior_head_created_at: Option<i64>) -> nostr::Timestamp {

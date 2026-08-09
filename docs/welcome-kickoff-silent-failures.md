@@ -34,7 +34,7 @@ process died. Everything else that drives a user-visible decision is a stopwatch
 | `WELCOME_KICKOFF_STAGE_TIMEOUT_MS` | 90s | whether to retire the kickoff stage |
 
 **The facts decorate; the timers decide.** `failedAfterKickoff` only chooses
-*wording* inside a message the 15s stopwatch already decided to send. Invert
+*wording* inside a message that the 15s stopwatch already decided to send. Invert
 that and most of this doc collapses: **facts decide, timers are a last-resort
 backstop.**
 
@@ -210,7 +210,7 @@ Scoped both rules by **what the turn has to say**, not who triggered it:
 
 ### Why it had to be a local test, not "don't loop"
 
-**"Don't get into a loop" is not a rule an agent can follow.** A loop is a
+**"Don't get into a loop" is not a rule that an agent can follow.** A loop is a
 global property of a conversation; each agent sees only its own turn, and every
 individual reply looks locally reasonable — which is why the sign-offs read as
 polite rather than broken. The rule had to become a **local, per-turn test**:
