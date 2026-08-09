@@ -113,7 +113,7 @@ export function registerCustomEmojiMarkdownIt(
     return true;
   };
 
-  // Run before markdown-it's own `:` handling (emphasis etc. are unaffected;
+  // Run before markdown-its own `:` handling (emphasis etc. are unaffected;
   // there is no built-in inline rule named "text" collision here). Inserting
   // before "emphasis" is safe and early enough.
   md.inline.ruler.before("emphasis", RULE_NAME, rule);
