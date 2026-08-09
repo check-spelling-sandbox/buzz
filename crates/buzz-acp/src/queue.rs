@@ -5502,8 +5502,8 @@ mod tests {
     ///
     /// A channel whose in-flight deadline was extended far into the future
     /// must NOT be auto-expired by `flush_next`.  No "BUG: in-flight channel
-    /// expired" logic fires; the channel stays in-flight; the pending event
-    /// for it is not dispatched a second time.
+    /// expired" logic fires; the channel stays in-flight; its pending event
+    /// is not dispatched a second time.
     #[test]
     fn extended_deadline_prevents_flush_next_expiry() {
         let mut q = EventQueue::new(DedupMode::Queue);
