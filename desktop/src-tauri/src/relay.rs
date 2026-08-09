@@ -561,7 +561,7 @@ pub async fn sync_managed_agent_profile(
 /// Queries the relay identified by `relay_url`. Callers uniformly pass the
 /// relay resolved by `effective_agent_relay_url` for every agent regardless of
 /// backend — always the active workspace relay — so the query targets the host
-/// the profile is actually published to.
+/// to which the profile is actually published.
 ///
 /// Returns the parsed profile content (display_name, picture) if a kind:0 event
 /// exists for the given pubkey, or `None` if no profile is published.

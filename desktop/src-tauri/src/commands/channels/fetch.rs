@@ -165,7 +165,7 @@ async fn query_last_messages(
 /// Whether `fetch_channels` includes the unbounded all-open directory scan.
 ///
 /// The 60s channel poll uses [`DirectoryScope::MemberOnly`]: it resolves only
-/// the channels the identity belongs to (plus its own not-yet-propagated
+/// the channels to which the identity belongs (plus its own not-yet-propagated
 /// creations), so phase 2's fan-out is bounded by membership instead of the
 /// entire relay. [`DirectoryScope::IncludeOpenDirectory`] additionally scans
 /// every open channel — the discovery surfaces (channel browser, global

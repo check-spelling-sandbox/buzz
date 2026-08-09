@@ -43,7 +43,7 @@ const STARTER_CHANNELS: &[StarterChannelSpec] = &[
 
 // ── Tauri commands ────────────────────────────────────────────────────────────
 
-/// Return the channels the active identity belongs to (plus its own
+/// Return the channels to which the active identity belongs (plus its own
 /// not-yet-propagated creations). This is the 60s poll path: it performs no
 /// all-open directory scan, so its phase-2 fan-out is bounded by membership.
 /// Joinable open channels are served separately by

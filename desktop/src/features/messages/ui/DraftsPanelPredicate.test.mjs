@@ -143,7 +143,7 @@ test("canSendDraft_not_member_returns_false", () => {
   assert.equal(
     canSendDraft(draft, source, "available"),
     false,
-    "draft in a channel the user is not a member of must not be sendable",
+    "draft in a channel to which the user is not a member must not be sendable",
   );
 });
 
