@@ -65,7 +65,7 @@ export type CreateChannelManagedAgentInput = {
   /** Team this instance is deployed from; prevents cross-team reuse. */
   teamId?: string | null;
   /**
-   * True when `runtime` is a runtime the user deliberately picked to override
+   * True when `runtime` is a runtime deliberately picked by the user to override
    * the persona (a deploy-dialog runtime selector), as opposed to a
    * missing-runtime fallback. Forwarded to the backend so a persona-backed
    * create only pins the harness for a deliberate override.
