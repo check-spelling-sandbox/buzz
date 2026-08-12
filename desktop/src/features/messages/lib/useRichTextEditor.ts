@@ -473,7 +473,7 @@ export function useRichTextEditor({
         // NOT via `addKeyboardShortcuts` (the keymap plugin) and NOT via a
         // wrapper-level React `onKeyDown`.
         //
-        // Why this layer specifically: immediately after a send the editor
+        // Why this layer specifically: immediately after a send, the editor
         // still holds DOM focus and the doc was just cleared. In the app's
         // WebView, ProseMirror's keymap/vertical-arrow path does not reliably
         // route ArrowUp to our binding in that state — the keystroke is
