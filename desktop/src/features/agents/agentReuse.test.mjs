@@ -40,7 +40,7 @@ test("commandsMatch: backslash paths match", () => {
   assert.equal(commandsMatch("C:\\Users\\bin\\goose", "goose"), true);
 });
 
-test("commandsMatch: case insensitive", () => {
+test("commandsMatch: case-insensitive", () => {
   assert.equal(commandsMatch("Goose", "GOOSE"), true);
 });
 
