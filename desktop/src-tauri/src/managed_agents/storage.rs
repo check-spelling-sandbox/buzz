@@ -320,7 +320,7 @@ fn hydrate_keys(records: &mut [ManagedAgentRecord]) {
 /// Testable core of [`hydrate_keys`], generic over the [`KeyStore`] seam.
 ///
 /// A keyring LOAD error (`Err`) is an OUTAGE — distinct from `Ok(None)`
-/// (genuinely absent). On an outage the key is left empty and the record is
+/// (genuinely absent). On an outage, the key is left empty and the record is
 /// surfaced as unavailable rather than silently swallowed: callers must refuse
 /// to spawn an agent whose key could not be read (see the empty-key bail in
 /// `spawn_agent_child`). Empty here never means "fine" — it means "no usable
