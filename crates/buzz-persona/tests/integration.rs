@@ -310,7 +310,7 @@ fn validation_catches_unknown_behavioral_keys() {
   "version": "1.0.0",
   "personas": ["agents/t.persona.md"],
   "defaults": {
-    "temprature": 0.5,
+    "temperature_": 0.5,
     "model": "test"
   }
 }"#,
@@ -331,7 +331,7 @@ fn validation_catches_unknown_behavioral_keys() {
     assert!(report.has_warnings(), "should catch typo in defaults");
     let warn_str = format!("{report}");
     assert!(
-        warn_str.contains("temprature"),
+        warn_str.contains("temperature_"),
         "should mention the typo: {warn_str}"
     );
 }

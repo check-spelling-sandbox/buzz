@@ -542,7 +542,7 @@ mod tests {
                 "name": "Typo Pack",
                 "version": "0.1.0",
                 "personas": ["agents/t.persona.md"],
-                "defaults": { "temprature": 0.5 }
+                "defaults": { "temperature_": 0.5 }
             }"#,
         )
         .unwrap();
@@ -556,7 +556,7 @@ mod tests {
         assert!(!report.has_errors(), "advisory checks should not be errors");
         assert!(report.has_warnings(), "expected warning for unknown key");
         let msg = format!("{report}");
-        assert!(msg.contains("temprature"), "got: {msg}");
+        assert!(msg.contains("temperature_"), "got: {msg}");
     }
 
     /// OPS standard fields should NOT trigger unknown key errors.

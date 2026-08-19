@@ -770,12 +770,12 @@ apply to both.
 | `broadcast_replies` | bool | `false` | `true` / `false` | Also surface thread replies to the main channel. |
 
 **Unknown keys** in `defaults` (in `plugin.json`) are **validation warnings** in `buzz pack
-validate` — this catches typos like `temprature` at validate time. Unknown keys in persona
+validate` — this catches typos like `temperature_` at validate time. Unknown keys in persona
 frontmatter are **hard errors** (via `deny_unknown_fields` in the YAML parser). At deploy time,
 buzz-acp logs a `WARN` and ignores unknown manifest keys, remaining fail-soft:
 
 ```
-WARN: Unknown key "temprature" in defaults (plugin.json); ignoring
+WARN: Unknown key "temperature_" in defaults (plugin.json); ignoring
 ```
 
 ### Full Behavioral Config Reference
