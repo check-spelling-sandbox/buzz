@@ -961,7 +961,7 @@ test("keeps the colored startup surface while huddle controls connect", async ({
   await expect(
     page.getByTestId("huddle-starting-view").locator(".bee-sprite"),
   ).toBeVisible();
-  await expect(page.getByTestId("setup-grainient-background")).toBeVisible();
+  await expect(page.getByTestId("setup-gradient-background")).toBeVisible();
   await expect(
     page.getByRole("button", { name: "Leave huddle" }),
   ).toBeVisible();

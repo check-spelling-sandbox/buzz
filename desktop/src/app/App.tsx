@@ -18,7 +18,7 @@ import {
   replaceCommunityDestinationRoute,
 } from "@/app/communityViewTransition";
 import { deriveShellRoute } from "@/app/AppShell.helpers";
-import { ThemeGrainientBackground } from "@/app/ThemeGrainientBackground";
+import { ThemeGradientBackground } from "@/app/ThemeGradientBackground";
 import { CommunityThemeController } from "@/shared/theme/CommunityThemeController";
 import { useReloadShortcut } from "@/app/useReloadShortcut";
 import { useCloseWindowShortcut } from "@/app/useCloseWindowShortcut";
@@ -167,7 +167,7 @@ function BeeLoader({
   );
 }
 
-// Cold boot gate: the theme-adaptive grainient background with a single
+// Cold boot gate: the theme-adaptive gradient background with a single
 // centered Buzz bee flying over it — the same static mark as before, now with
 // its wings flapping (ported from the Buzz website's wing-flap). Replaces the
 // old "Setting up your community" text, which stays as an sr-only caption.
@@ -179,7 +179,7 @@ function AppLoadingGate() {
       role="status"
     >
       <StartupWindowDragRegion />
-      <ThemeGrainientBackground />
+      <ThemeGradientBackground />
       <span className="sr-only">{LOADING_TEXT}</span>
       <FlappingBee className="relative z-10 h-auto w-28" />
     </div>
