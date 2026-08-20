@@ -68,7 +68,7 @@ free.
 - Cross-community links. Like `buzz://message`, links are interpreted against
   the community the message was received in. A `relay=` query parameter is
   reserved for a future cross-community version but not emitted or consumed.
-- Generic OpenGraph unfurling for arbitrary URLs — that is the separate
+- Generic Open Graph unfurling for arbitrary URLs — that is the separate
   `proto/rich-link-previews` prototype and stays orthogonal.
 - Mobile rendering. Mobile should degrade gracefully (plain link) in v1;
   pill/card parity is a follow-up.
@@ -243,7 +243,7 @@ No persona changes needed — the base prompt applies to all managed agents.
 
 ## Interaction with existing work
 
-- **`proto/rich-link-previews`** (generic OpenGraph cards): orthogonal.
+- **`proto/rich-link-previews`** (generic Open Graph cards): orthogonal.
   Entity links never hit the network beyond a relay event query; no overlap
   in code paths except the shared `AttachmentGroup` rendering slot.
 - **`feat/multi-repository-projects` (NIP-MP)**: independent. Entity links

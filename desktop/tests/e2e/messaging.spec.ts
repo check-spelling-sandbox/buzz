@@ -151,7 +151,7 @@ test.beforeEach(async ({ page }, testInfo) => {
         : testInfo.title.includes("fragment link previews")
           ? {
               // Metadata is keyed by the canonical, fragment-less URL — the
-              // shape a real OpenGraph/HTML fetch resolves against. A resolver
+              // shape a real Open Graph/HTML fetch resolves against. A resolver
               // that fetches with the raw `#fragment` attached would miss these
               // keys and drop the card, which is exactly the bug under test.
               linkPreviewMetadataByHref: {
