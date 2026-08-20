@@ -113,7 +113,7 @@ fn migrate_pollen_agent_name_in_file(path: &Path, now: &str) {
                 == Some(crate::managed_agents::POLLEN_DISPLAY_NAME);
         // Definition rows are absent on direct upgrades from the pre-unified
         // persona store. The stock hashes still let pristine linked instances
-        // advance instead of appearing falsely out of date after seeding.
+        // advance instead of appearing falsely out-of-date after seeding.
         let version_update = version_updates.get(&persona_id);
         if !is_instance || (!is_pollen_instance && version_update.is_none()) {
             continue;
