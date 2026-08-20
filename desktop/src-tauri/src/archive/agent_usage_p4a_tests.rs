@@ -1,6 +1,6 @@
 //! Tests for P4a additions: cache-read/write ladder (§S-1 extension),
 //! freshInputTokens derivation, and D6 comparator. Split from
-//! `agent_usage_tests.rs` to keep both files under the 1 000-line ratchet.
+//! `agent_usage_tests.rs` to keep both files under the 1,000-line ratchet.
 
 use super::*;
 use crate::archive::metric_store::{AgentMetricIndexRow, ParseStatus};
