@@ -192,6 +192,6 @@ test("ManifestSchema rejects an unknown field inside an exact record", () => {
   // Strictness must reach nested objects too, not just the root — an exact
   // record with a stray key is where a hand-edit typo most plausibly lands.
   const mutated = structuredClone(manifestJson);
-  mutated.exact_records[0].raw_modle_id = "typo";
+  mutated.exact_records[0].raw_module__id = "typo";
   assert.throws(() => ManifestSchema.parse(mutated));
 });
