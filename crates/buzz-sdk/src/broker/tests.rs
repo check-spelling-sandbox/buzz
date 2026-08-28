@@ -1267,8 +1267,9 @@ fn a_pubkey_must_be_a_point_on_the_curve_not_merely_hex() {
             serde_json::from_value::<PubkeyHex>(serde_json::json!(junk)).is_err(),
             "the wire door must reject the non-point \"{junk}\" too"
         );
-        // And through a payload, since that is the shape a host actually sends.
-        // The honest form parses, so this rejects for the key and not the shape.
+        // Check that the data is rejected as a payload because the host actually
+        // sends that shape. The honest form parses, so this rejects for the key
+        // and not the shape.
         let target = |value: &str| {
             serde_json::json!({
                 "action": "agents.delete",
