@@ -11,7 +11,7 @@ const SWEEP_INTERVAL_MS = 60 * 60 * 1_000;
 /** Minimum time after app boot before the first sweep begins. */
 export const BOOT_SWEEP_FLOOR_MS = 30_000;
 /**
- * Generous idle-callback ceiling. Unlike the original 1 500 ms value this is
+ * Generous idle-callback ceiling. Unlike the original 1,500 ms value this is
  * not a forcing timeout that lands during busy startup — the browser schedules
  * the callback when the main thread is genuinely idle.
  */
