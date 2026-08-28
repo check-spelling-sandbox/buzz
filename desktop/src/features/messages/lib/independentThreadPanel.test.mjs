@@ -90,7 +90,7 @@ function head(channelEvents, replyEvents) {
 
 // Regression: the reported bug. The head's edit is in the channel window (so the
 // main timeline shows it) but has NOT yet been pulled into the thread-reply aux
-// cache. Before the fix the thread head rendered the un-edited original.
+// cache. Before the fix, the thread head rendered the un-edited original.
 test("applies the head edit carried only in the channel window", () => {
   const root = contentEvent(ROOT_ID, "two PRs");
   const edit = editEvent(EDIT_ID, ROOT_ID, "these PRs (3)", 2000);
