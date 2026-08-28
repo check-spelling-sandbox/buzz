@@ -188,7 +188,8 @@ impl ArchiveDb {
     /// Whether the maintenance WRITE guard can be taken right now. A live
     /// `with_conn` connection holds the read guard, so this returns `false`
     /// while any ordinary connection is open and `true` once all have dropped —
-    /// exactly the signal the Phase-4 sole-connection VACUUM will gate on.
+    /// exactly the signal on which the Phase-4 sole-connection VACUUM will
+    /// gate.
     fn maintenance_write_available(&self) -> bool {
         self.maintenance.try_write().is_ok()
     }

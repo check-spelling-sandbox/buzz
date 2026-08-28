@@ -447,7 +447,7 @@ impl RunCtx<'_> {
                 // a restart is the manual workaround, not an exception to it.)
                 //
                 // Retried in-loop rather than returned so the recovered context
-                // continues the turn the user is waiting on.
+                // continues the turn on which the user is waiting.
                 Err(AgentError::LlmContextExceeded(e)) => {
                     match self
                         .recover_from_context_overflow(&mut context_recoveries)
