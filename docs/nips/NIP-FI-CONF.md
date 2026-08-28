@@ -166,7 +166,7 @@ be reported with the reason, and its value MUST be independent of the private
 condition. If core later pins another field, it joins with no edit here.
 
 **Run discipline.** The oracle runs a fixed positive iteration count on a
-pinned isolated runner at the exact claimed head. Before the run the operator
+pinned isolated runner at the exact claimed head. Before the run, the operator
 records the environment, public-response corpus, bounds, sampling method,
 statistical rule, noise treatment, and acceptance threshold. A breach fails the
 gate, MUST NOT trigger an automatic retry, and is retained and investigated
