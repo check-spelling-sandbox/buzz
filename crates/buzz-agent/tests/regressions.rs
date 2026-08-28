@@ -848,7 +848,7 @@ async fn hook_tools_hidden_from_llm() {
     .await;
     // We deliberately leave MCP_HOOK_SERVERS unset so the
     // agent's hook gate is disabled — hook-tool hiding must hold even
-    // when hooks aren't allowlisted (defense in depth).
+    // when hooks aren't allowlisted (defense-in-depth).
     let mut h = Harness::spawn(&llm.url).await;
     let sid = init_session_with_fake_mcp(
         &mut h,

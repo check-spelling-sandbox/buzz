@@ -1194,7 +1194,7 @@ pub async fn receive_pack(
 /// Per-process git configuration for the hydrated receive-pack workspace.
 fn receive_pack_git_config(hooks_dir: String) -> Vec<(&'static str, String)> {
     vec![
-        // Override any repo-local core.hooksPath setting; defense in depth
+        // Override any repo-local core.hooksPath setting; defense-in-depth
         // even though the hydrated workspace has no inherited config.
         ("GIT_CONFIG_COUNT", "2".to_string()),
         ("GIT_CONFIG_KEY_0", "core.hooksPath".to_string()),

@@ -99,7 +99,7 @@ pub fn list_user_search_results(events: &[Event], limit: usize) -> SearchUsersRe
 /// highest-scoring result per pubkey (the relay should already return one doc
 /// per event id, and kind:0 is a NIP-16 replaceable event so stale rows are
 /// soft-deleted in the DB and filtered out before reaching us — this is
-/// defense in depth in case both somehow slip through).
+/// defense-in-depth in case both somehow slip through).
 pub fn rank_user_search_results(
     events: &[Event],
     query: &str,

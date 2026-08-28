@@ -360,7 +360,7 @@ fn limit_relay_websocket<F>(
     ws: WebSocketUpgrade<F>,
     max_frame_bytes: usize,
 ) -> WebSocketUpgrade<F> {
-    // recv_loop keeps the application-level check as defense in depth, but
+    // recv_loop keeps the application-level check as defense-in-depth, but
     // parser limits must be set before tungstenite assembles the message.
     ws.max_message_size(max_frame_bytes)
         .max_frame_size(max_frame_bytes)

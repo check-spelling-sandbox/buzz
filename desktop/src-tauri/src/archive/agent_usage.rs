@@ -41,7 +41,7 @@ const MAX_INTERVAL_SECS: i64 = 48 * 3600;
 /// buckets = one leap year, the product ceiling on the custom date-range
 /// picker. Bounds the SQLite window scan and keeps the rendered bar chart
 /// legible; the frontend clamps the picker to the same span so a user never
-/// reaches this check, which stays as fail-closed defense in depth.
+/// reaches this check, which stays as fail-closed defense-in-depth.
 const MAX_BOUNDARIES: usize = 367;
 
 /// Smallest boundary count that describes a real window: 2 boundaries =

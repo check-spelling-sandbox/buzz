@@ -66,7 +66,7 @@ pub(crate) fn looks_like_mp4_iso_bmff(bytes: &[u8]) -> bool {
 /// *render as active content* if it ever reaches them with the wrong response
 /// headers. We serve generic files with `Content-Disposition: attachment` +
 /// `X-Content-Type-Options: nosniff` + `CSP: default-src 'none'`, which already
-/// neutralises them — this allowlist-of-denials is defence in depth, so a future
+/// neutralises them — this allowlist-of-denials is defense-in-depth, so a future
 /// header regression can't turn an uploaded blob into a stored-XSS vector.
 ///
 /// JS and SVG are the classic stored-XSS carriers. Native executables are
@@ -81,7 +81,7 @@ pub(crate) fn looks_like_mp4_iso_bmff(bytes: &[u8]) -> bool {
 /// `infer` recognises anyway — HTML that evades the sniff already uploaded as
 /// `application/octet-stream` and served as a download, so blocking canonical
 /// HTML was inconsistent rather than a real control. `application/xhtml+xml`
-/// stays listed as dormant defence in depth: `infer` has no XHTML matcher, so
+/// stays listed as dormant defense-in-depth: `infer` has no XHTML matcher, so
 /// it is unreachable through sniffing, but the entry costs nothing and guards
 /// against a future detector that does classify it.
 const BLOCKED_FILE_MIME_TYPES: &[&str] = &[

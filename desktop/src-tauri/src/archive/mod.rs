@@ -741,7 +741,7 @@ pub async fn read_archived_events(
 /// Synchronous SQLite core of [`get_agent_usage_series`], split out so tests
 /// can drive it directly against an in-memory `Connection` without a Tauri
 /// `AppState`. Backfills any unindexed kind-44200 rows, repairs orphaned
-/// index rows (defense in depth alongside A6's GC-time cascade), validates
+/// index rows (defense-in-depth alongside A6's GC-time cascade), validates
 /// the request, loads the window + exact-key probe rows, and hands them to
 /// the pure `agent_usage::compute_series`.
 fn agent_usage_series(

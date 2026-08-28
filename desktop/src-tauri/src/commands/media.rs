@@ -630,7 +630,7 @@ async fn process_picked_path(
 /// `File::open()` — an inherent limit of the OS file-picker API. The risk is
 /// bounded (local attacker winning a race against an immediate open) and
 /// server-side content validation (MIME, image decode, size caps) is the
-/// defense in depth.
+/// defense-in-depth.
 ///
 /// Uploads run sequentially; on first failure, prior uploads are not
 /// rolled back (they're already content-addressed on the relay).

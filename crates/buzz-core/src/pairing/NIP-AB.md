@@ -568,7 +568,7 @@ Session secrets are random and single-use. Ephemeral keypairs are generated per 
 
 **2. NIP-44 key binding**: Even if the `p` tag check were bypassed, NIP-44 decryption would fail. The conversation key is derived from `ECDH(own_ephemeral_privkey, sender_pubkey)`. A replayed event encrypted for session A's keypair cannot be decrypted by session B's keypair.
 
-These two mechanisms are independent; either alone is sufficient to prevent cross-session replay. Together they provide defense in depth.
+These two mechanisms are independent; either alone is sufficient to prevent cross-session replay. Together they provide defense-in-depth.
 
 **Within-session replay**: The state machine provides within-session replay protection. Once a message type has been processed and the state has advanced, a replayed copy of the same message is out-of-order and MUST be discarded (§Event Validation, item 7). The duplicate event ID check (§Duplicate Event Handling) provides an additional layer.
 

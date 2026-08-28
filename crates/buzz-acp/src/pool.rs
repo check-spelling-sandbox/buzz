@@ -4211,7 +4211,7 @@ struct ControlCancelFailure {
 /// didn't stop within its bounded grace window. [`AcpError::HardTimeout`] is
 /// not expected here — [`AcpClient::cancel_with_cleanup_grace`] translates its
 /// own drain-deadline `HardTimeout` into `CancelDrainTimeout` before
-/// returning — but for defense in depth an unexpected `HardTimeout` at this
+/// returning — but for defense-in-depth an unexpected `HardTimeout` at this
 /// bounded cancellation boundary must never regain real hard-cap/dead-letter
 /// classification, so it maps to `CancelDrainTimeout(CONTROL_CANCEL_GRACE)`
 /// rather than `Timeout(Hard)`.

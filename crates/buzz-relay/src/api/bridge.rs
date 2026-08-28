@@ -3272,7 +3272,7 @@ mod tests {
 
     /// `authors=[agent_a]` search must not return an envelope authored by agent_b,
     /// even if the FTS text match would otherwise surface it. (The FTS query does
-    /// carry an `authors` pushdown today, so this is defence-in-depth; mirroring
+    /// carry an `authors` pushdown today, so this is defense-in-depth; mirroring
     /// the WS contract.)
     #[test]
     fn search_hit_rejects_event_with_mismatched_author() {

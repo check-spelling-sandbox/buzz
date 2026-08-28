@@ -1806,7 +1806,7 @@ describe("useCommunityJoinAlerts — mounted subscription behaviour", () => {
    *     session refuses every later frame outright, so whether that frame moved
    *     the fence first is unobservable.
    *
-   * The placement is therefore defence in depth against a FUTURE reject-and-
+   * The placement is therefore defense-in-depth against a FUTURE reject-and-
    * continue path, not a currently-reachable defect. Pinning it here is what
    * makes the next such guard visible — a new early return added between these
    * two points would be caught by this arm rather than by a user.

@@ -14,7 +14,7 @@
 //!   cryptographically declares the viewer as its NIP-OA owner. Either way
 //!   the engrams are NIP-44 encrypted to the viewer's own pubkey, so the
 //!   encryption is the real boundary; this gate just decides whether to try.
-//!   The UI hides the section for non-owners anyway, but defense in depth.
+//!   The UI hides the section for non-owners anyway, but defense-in-depth.
 //! - One call returns everything because the orphans view requires the
 //!   full set anyway. Lazy/per-node decrypt is deferred to IXI-60.
 

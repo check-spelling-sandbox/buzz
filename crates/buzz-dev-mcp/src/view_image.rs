@@ -567,7 +567,7 @@ fn prepare(bytes: &[u8], max_dim: u32) -> Result<PreparedImage, String> {
     }
 
     // Resize path: decode, resize, re-encode (PNG if alpha, JPEG otherwise).
-    // The `Limits` cap is defence-in-depth for the case the dimension check
+    // The `Limits` cap is defense-in-depth for the case the dimension check
     // missed (e.g. some progressive JPEG re-allocations).
     let mut decoder = ImageReader::new(Cursor::new(bytes))
         .with_guessed_format()

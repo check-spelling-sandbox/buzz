@@ -183,7 +183,7 @@ test("applyTauriRateLimitIfNeeded with oversized hint clamps to MAX_HINT_SECONDS
   // (the Rust layer clamps in practice, but TS must be independently safe).
   reset(0);
   const { applyTauriRateLimitIfNeeded } = await import("./tauri.ts");
-  // Simulate a message that somehow escaped the Rust cap (defence-in-depth).
+  // Simulate a message that somehow escaped the Rust cap (defense-in-depth).
   applyTauriRateLimitIfNeeded("relay rate-limited: retry in 1000000s");
   // Gate should cap at MAX_HINT_SECONDS * 1000 ms.
   tickTo(MAX_HINT_SECONDS * 1_000 - 1);
