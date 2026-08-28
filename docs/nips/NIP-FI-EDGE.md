@@ -33,7 +33,7 @@ Server-owned listener, route, and authorization-domain configuration selects exa
 one edge profile before protected traffic is accepted. Request evidence cannot
 select, negotiate, or downgrade that profile. Missing, repeated, comma-combined,
 malformed, oversized, mixed-profile, or profile-inconsistent evidence denies without
-fallback to `client-attached` or another edge profile.
+falling back to `client-attached` or another edge profile.
 
 Every trusted edge MUST:
 
