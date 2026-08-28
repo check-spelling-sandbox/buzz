@@ -409,8 +409,8 @@ pub fn is_safe_catalog_avatar_url(url: &str) -> bool {
         // Reject ECMAScript-`\s` whitespace or parentheses, matching TS's
         // pre-check `/[\s()]/u.test(value)`. Exact `\s` equivalence in Rust:
         //   ECMAScript `\s` = char::is_whitespace() − U+0085 (NEL) + U+FEFF (BOM)
-        // url::Url::parse percent-encodes these rather than rejecting them, so
-        // without the guard the two validators would diverge.
+        // url::Url::parse percent-encodes these rather than rejecting them, so,
+        // without the guard, the two validators would diverge.
         if url.chars().any(|c| {
             ((c.is_whitespace() && c != '\u{0085}') || c == '\u{FEFF}') || c == '(' || c == ')'
         }) {
