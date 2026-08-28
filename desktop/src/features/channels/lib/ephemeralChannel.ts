@@ -14,7 +14,7 @@ type EphemeralChannelLike = Pick<Channel, "ttlSeconds" | "ttlDeadline">;
 
 export const EPHEMERAL_CHANNEL_LABEL = "Ephemeral";
 
-/** Default TTL for ephemeral channels: 7 days of inactivity. */
+/** Default TTL for ephemeral channels: seven days of inactivity. */
 export const DEFAULT_EPHEMERAL_TTL_SECONDS = 7 * 24 * 60 * 60;
 
 export type EphemeralChannelDisplay = {
