@@ -111,7 +111,7 @@ impl AgentIdentity {
     }
 }
 
-/// A fresh generation token: 8 lowercase hex chars from the OS RNG.
+/// A fresh generation token: eight lowercase hex chars from the OS RNG.
 ///
 /// Appears in the Secret name and as `BUZZ_MANAGED_AGENT_START_NONCE`, so the
 /// Secret generation and the harness's lifecycle-frame correlator are one
