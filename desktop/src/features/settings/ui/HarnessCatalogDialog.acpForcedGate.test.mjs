@@ -242,9 +242,10 @@ function renderSurface() {
 }
 
 /**
- * Drive the search input the way a user would: set its value and dispatch a
- * React-observed input event, so `filterCatalogEntries` runs against a live
- * query. A query that matches no cached entry filters the list to zero.
+ * Drive the search input the same way a user would: set its value and
+ * dispatch a React-observed input event, so `filterCatalogEntries` runs
+ * against a live query. A query that matches no cached entry filters the
+ * list to zero.
  */
 async function typeSearch(query) {
   const input = document.body.querySelector(

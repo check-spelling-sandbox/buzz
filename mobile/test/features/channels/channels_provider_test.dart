@@ -2374,7 +2374,8 @@ ProviderContainer _buildContainer({required _FakeRelaySession session}) {
       appLifecycleProvider.overrideWith(() => _FakeAppLifecycleNotifier()),
       relaySessionProvider.overrideWith(() => session),
       // Route the pubkey through a mutable notifier so tests can switch the
-      // signing identity mid-flight the way an account change does at runtime.
+      // signing identity mid-flight the same way an account change does at
+      // runtime.
       myPubkeyProvider.overrideWith((ref) => ref.watch(_testPubkeyProvider)),
     ],
   );

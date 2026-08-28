@@ -2734,10 +2734,10 @@ fn a_client_cannot_hand_back_a_response_that_answers_a_different_request() {
     ));
 }
 
-/// A second double, parsing bytes the way a real HTTP client does, because the
-/// strict-envelope and strict-event guards live in `Deserialize` and the typed
-/// double above can never exercise them: it hands back a value that was never on
-/// a wire.
+/// A second double, parsing bytes the same way a real HTTP client does, because
+/// the strict-envelope and strict-event guards live in `Deserialize` and the
+/// typed double above can never exercise them: it hands back a value that was
+/// never on a wire.
 ///
 /// This is the shape the bug actually had — bytes arriving from a host — and what
 /// the caller sees now is [`BrokerTransportError::MalformedResponse`], not an
