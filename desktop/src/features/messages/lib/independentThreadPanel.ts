@@ -25,7 +25,7 @@ import {
  * Deletion closure: an edit/reaction on the head can itself be deleted by a
  * kind:5/9005 that `#e`-references the *overlay's* id, not the head's. Those
  * deletions are copied too, so a deleted edit/reaction stays deleted in the
- * thread head instead of being resurrected until the async aux backfill lands
+ * thread head instead of being resurrected until the async aux-backfill lands
  * (or permanently if it fails) — mirroring the closure the aux-backfill paths
  * build (`mergeAuxEventsWithDeletionBackfill`).
  */
