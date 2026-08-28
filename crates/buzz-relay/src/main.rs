@@ -1012,7 +1012,7 @@ async fn main() -> anyhow::Result<()> {
                     metrics::gauge!("buzz_db_read_pool_active").set(read_active as f64);
                     metrics::gauge!("buzz_db_read_pool_max").set(read_stats.max as f64);
 
-                    // Fence observability: 1 when replica routing is
+                    // Fence observability: open=1 when replica routing is
                     // eligible, and the verified-freshness lag in seconds.
                     // Closed/stale fence reports open=0 with lag untouched.
                     match pool_state.db.fence().verified_through() {
