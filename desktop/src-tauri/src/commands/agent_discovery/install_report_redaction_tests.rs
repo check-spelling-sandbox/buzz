@@ -393,7 +393,7 @@ fn test_proxy_and_pat_credentials_are_redacted_from_the_log_and_the_live_line() 
     let pat = "ghp_abcdefghij0123456789";
     // The classifier's own tests cover recognising these under their real
     // variable names; injecting the resulting secrets here keeps a live
-    // `HTTPS_PROXY` out of the process the rest of the suite shares.
+    // `HTTPS_PROXY` out of the process where the rest of the suite shares.
     let h = harness_with_secrets(vec![format!("corpuser:{proxy_password}"), pat.to_string()]);
 
     h.reporter.record_attempt(

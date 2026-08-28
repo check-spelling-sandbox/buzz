@@ -1402,7 +1402,7 @@ pub fn discover_acp_runtimes_from(
 
 /// Test-only seam: a callback invoked between discovery's directory scan and
 /// its registry publish, so tests can land a `save_and_warm`/`delete_and_warm`
-/// in exactly the window the stale-snapshot bug lived in — through the REAL
+/// in exactly the window where the stale-snapshot bug lived — through the REAL
 /// `discover_acp_runtimes_from` call path, not a hand-called seam.
 #[cfg(test)]
 pub(crate) mod pre_publish_test_hook {
